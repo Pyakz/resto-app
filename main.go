@@ -4,12 +4,8 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pyakz/resto-app/database"
 	"github.com/pyakz/resto-app/routes"
-	"go.mongodb.org/mongo-driver/mongo"
 )
-
-var foodCollection *mongo.Collection = database.OpenCollection(database.Client, "food")
 
 func main() {
 	PORT := os.Getenv("PORT")

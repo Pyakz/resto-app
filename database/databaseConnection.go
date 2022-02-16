@@ -30,7 +30,6 @@ func DBInstance() *mongo.Client {
 	}
 
 	fmt.Println("Connected to MongoDB")
-
 	return client
 }
 
@@ -38,6 +37,5 @@ var Client *mongo.Client = DBInstance()
 
 func OpenCollection(client *mongo.Client, collectionName string) *mongo.Collection {
 	var collection *mongo.Collection = client.Database("restaurant").Collection(collectionName)
-
 	return collection
 }
